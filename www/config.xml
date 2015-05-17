@@ -6,14 +6,14 @@
         id        = "com.phonegap.grocersbuddy"
         version   = "1.0.0">
 
-    <name>Grocer's Buddy</name>
+    <name>Grocers Buddy</name>
 
     <description>
-        Grocer's Buddy is a prototype to show simple ideas can make a great change
+        Grocers buddy is a prototype for apps of Potatocodes Inc.
     </description>
 
     <author href="http://potatocodes.com" email="info@potatocodes.com">
-        Potatocodes Inc.
+        Potatocodes Team
     </author>
 
     <!--
