@@ -30,7 +30,7 @@
 
         <script type="text/javascript" src="js/processing/processing.min.js"></script>  
 
-        <title>SAPUL</title>
+        <title>GROCER'S BUDDY</title>
     </head>
     <body>
         <a class="gb-menu-items" href="add.php"><div>ADD ITEM</div></a>
