@@ -44,8 +44,10 @@
         <a class="gb-menu-items" href="index.php"><div>HOME</div></a>
 
         <form>
-            <label><br>NAME:</br> </label><input id="name" data-role="fieldcontain" size ="100" style="width: 300px;" field="text"/>
-            <label><br>PRICE:</br> </label><input id="price" data-role="fieldcontain" size ="100" style="width: 300px;" field="text"/>
+            <div id= "name" data-role="fieldcontain">
+            <label><br>NAME:</br> </label><input id="name" size ="100" style="width: 300px;" field="text"/>
+            <div id= "price" data-role="fieldcontain">
+            <label><br>PRICE:</br> </label><input id="price" size ="100" style="width: 300px;" field="text"/>
             <button id="submit-button">ADD ITEM</button>
         </form>
         <div id="items-container">
@@ -102,6 +104,7 @@
 
                 gatheredPosts.push({title:document.getElementById("name").value, price:document.getElementById("price").value});
                 //alert("Your item has been added to list");
+
                 window.localStorage.setArray("cachedPosts", gatheredPosts);
             }
 
