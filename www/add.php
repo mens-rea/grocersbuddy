@@ -103,8 +103,7 @@
                 gatheredPosts = window.localStorage.getArray("cachedPosts");
 
                 gatheredPosts.push({title:document.getElementById("name").value, price:document.getElementById("price").value});
-                //alert("Your item has been added to list");
-
+                
                 window.localStorage.setArray("cachedPosts", gatheredPosts);
             }
 
