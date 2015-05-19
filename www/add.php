@@ -44,11 +44,10 @@
         <form>
             <label>NAME: </label><input id="name" field="text"/>
             <label>PRICE: </label><input id="price" field="text"/>
-            <button id="submit-button" type="submit">ADD ITEM</button>
+            <button id="submit-button">ADD ITEM</button>
         </form>
         <div id="items-container">
-            <div class="gb-grocery-items half-wit"><div class="gb-grocery-items-inner">CHEESE - Php 100.00 <a id="item-1" name="cheese" href="#">ADD TO CART</a></div></div>
-            <div class="gb-grocery-items half-wit"><div class="gb-grocery-items-inner">COKE - Php 25.00 <a id="item-2" name="coke" href="#">ADD TO CART</a></div></div>
+            
         </div>
 
         <script type="text/javascript" src="js/index.js"></script>
@@ -76,45 +75,17 @@
             }
 
             window.localStorage.setArray("cachedPosts", gatheredPosts);
-
+            /*
             for (var i = 0; i < gatheredPosts.length; i++) {
                     var x = document.createElement("div");
                     var t = document.createTextNode(gatheredPosts[i].title+": "+gatheredPosts[i].price);
                     x.appendChild(t);
                     document.body.appendChild(x);
             }
+            */
 
 
             function whatClicked(evt) {
-                /*
-                alert("Submitted!");
-                alert(document.getElementById("name").value);
-                alert(document.getElementById("price").value);
-                */
-                /*
-                index = parseInt(localStorage["key"]);
-
-                names[index] = prompt("New member name?");
-                
-                index=index+1;
-                alert(index);
-                localStorage["key"] = index;
-                
-                localStorage["names"] = JSON.stringify(names);
-
-                alert(localStorage["key"]);
-
-                storedNames = JSON.parse(localStorage["names"]);
-                */
-                /*
-                var names = [];
-                names[2] = prompt("New member name?");
-                localStorage["names"] = JSON.stringify(names);
-
-
-                var storedNames = JSON.parse(localStorage["names"]);
-                alert(storedNames);
-                */
                 Storage.prototype.setArray = function(key, obj) {
                         return this.setItem(key, JSON.stringify(obj))
                 }
