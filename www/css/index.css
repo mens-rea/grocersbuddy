@@ -167,7 +167,8 @@ button.camera-control:hover {
 .main-menu{
   font-size: 1.2em;
   text-decoration: none;
-  color: white;
+  --color: white;
+  color: #b3e5fc;
 }
 
 .menu{
@@ -183,7 +184,8 @@ button.camera-control:hover {
   padding: 10px 15px;
 }
 .menu li a:hover, .menu li a:active, .menu li a:focus{
-  color: green;
+  --color: green;
+  color: #FFFFFF;
 }
 
 .gb-menu-items{
@@ -191,19 +193,49 @@ button.camera-control:hover {
   color: #2e2e2e;
 }
 .gb-menu-items div{
-  border: 1px solid red; 
+  border: 1px solid #607d8b; 
+  --border: 1px solid red; 
   width: 100%; 
   text-align: center;
   font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
   height: 150px; 
   font-size: 2em; 
-  padding-top: 20%; 
+  padding-top: 15%;
+  padding-bottom: 15%; 
   font-weight: 600;
 }
 
 .gb-grocery-items-inner{
-  border: 1px solid red;
+  border: 2px solid #b3e5fc;
   height: 150px;
+  margin-top: 15px;
+  position: relative;
+}
+.gb-grocery-items-inner a{
+  padding: 10px 15px;
+  background-color: #b3e5fc;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  font-weight: 600;
+  text-decoration: none;
+}
+.gb-grocery-items-inner a:hover{
+  background-color: black;
+  color: white;
+}
+.element-container{
+  font-size: 2em;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.element-container2{
+  font-size: 1.2em;
+  position: relative;
+  width: 100%;
+  border: 1px solid #b3e5fc;;
 }
 
 * {
@@ -236,7 +268,8 @@ body {
   width: 100%;
   height: auto;
   line-height: 45px;
-  background: #2e2e2e;
+  --background: #2e2e2e;
+  background-color: #0288d1;  
   padding: 0;
   color: #eee;
   font-size: 20px;
@@ -303,7 +336,6 @@ body {
   padding: 0 10px;
   height: auto;
   line-height: 40px;
-  border-bottom: 1px solid #ccc;
   border-top: 1px solid #fff;
   background-color: #fafafa;
   font-size: 14px;
@@ -321,10 +353,11 @@ body {
 }
 
 #cleardata{
-  height: 45px;
+  height: 47px;
   float: right;
-  background-color: red;
-  color: white;
+  --background-color: red;
+  background-color: #f44336;  
+  color: #F5F5F5;
   border: none;
   cursor: pointer;
 }

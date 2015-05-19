@@ -22,22 +22,28 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
 
         <script type="text/javascript" charset="utf-8" src="phonegap-0.9.2.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2"></script>
 
         <script type="text/javascript" src="js/processing/processing.min.js"></script>  
+        <script type="text/javascript" src="js/iscroll.js"></script>
 
         <title>GROCER'S BUDDY</title>
     </head>
     <body>
-        <a class="gb-menu-items" href="add.php"><div>ADD ITEM</div></a>
-        <a class="gb-menu-items" href="available.php"><div>SHOP</div></a>
-        <a class="gb-menu-items" href="list.php"><div>LIST CATEGORY</div></a>
-        <button id="cleardata">CLEAR DATA</button>
+        <a class="gb-menu-items" href="add.php"><div style="background-color: #FFFFFF; color:#727272;"><i class="fa fa-plus"></i> ADD ITEM</div></a>
+        <a class="gb-menu-items" href="available.php"><div style="background-color: #0288D1; color:#b3e5fc;"><i class="fa fa-calendar"></i> SHOP</div></a>
+        <a class="gb-menu-items" href="list.php"><div style="background-color: #FFFFFF; color:#727272;">LIST CATEGORY</div></a>
+        <button id="cleardata" onclick="myFunction()" style="background-color: #607d8b; color:#cfd8dc;">CLEAR DATA</button>
 
+ <script type="text/javascript">
+function myFunction() {
+    location.reload();
+}
+</script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();

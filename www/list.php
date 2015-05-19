@@ -22,7 +22,7 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
 
         <script type="text/javascript" src="../plugins/iscroll.js"></script>
@@ -31,18 +31,25 @@
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2"></script>
 
         <script type="text/javascript" src="js/processing/processing.min.js"></script>  
+        <script type="text/javascript" src="js/iscroll.js"></script>
+        <script type="text/javascript">
+var myScroll;
+function loaded() {
+    myScroll = new IScroll('#wrapper');
+}
+</script>
 
         <title>SHOPPING BUDDY</title>
     </head>
-    <body>
+    <body onload="loaded()">
 
         <div id="header">
-            <ul class="menu">
-                <li><a class="main-menu" href="index.php">HOME</a></li>
-                <li><a class="main-menu" href="available.php">SHOP</a></li>
-                <li><a class="main-menu" href="list.php">CART</a></li>
-                <button id="cleardata">CLEAR CART</button>
-            </ul>
+                <ul class="menu">    
+                    <li><a class="main-menu" href="index.php">HOME</a></li>
+                    <li><a class="main-menu" href="available.php">SHOP</a></li>
+                    <li><a class="main-menu" href="list.php">CART</a></li>
+                    <button  onmouseover="this.style.backgroundColor= '#d32f2f'" onmouseout="this.style.backgroundColor='#f44336'" id="cleardata" onclick="rereload()">CLEAR CART</button>
+                </ul>
             <div class="table-properties">ITEM</div><div class="table-properties">AMOUNT</div><div class="table-properties">SUBTOTAL</div>
         </div>
 
@@ -58,6 +65,11 @@
         </div>
 
         <script type="text/javascript" src="js/index.js"></script>
+              <script type="text/javascript">
+function myFunction() {
+    location.reload();
+}
+</script>
         <script type="text/javascript">
             app.initialize();
 
@@ -108,6 +120,10 @@
             }
 
             document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+            function rereload(){
+                location.reload();
+            }
         </script>
 
         <script type="text/javascript">

@@ -22,24 +22,31 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
 
         <script type="text/javascript" src="../plugins/iscroll.js"></script>
 
         <script type="text/javascript" charset="utf-8" src="phonegap-0.9.2.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2"></script>
-
+        <script type="text/javascript" src="js/iscroll.js"></script>
+         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        
         <script type="text/javascript" src="js/processing/processing.min.js"></script>  
+<script type="text/javascript">
 
+var myScroll;
+function loaded() {
+    myScroll = new IScroll('#wrapper');
+}
+</script>
         <title>GROCER'S BUDDY</title>
     </head>
-    <body>
-
-        <div id="header">
-            <ul class="menu">
-                <li><a class="main-menu" href="index.php">HOME</a></li>
-                <li><a class="main-menu" href="list.php">CART</a></li>
+    <body onload="loaded()">
+            <div id="header">
+         <ul class="menu">
+                <li><a class="main-menu" href="index.php"><i class="fa fa-home"></i> HOME</a></li>
+                <li><a class="main-menu" href="list.php"><i class="fa fa-shopping-cart"></i> CART</a></li>
             </ul>
         </div>
 
@@ -50,7 +57,6 @@
             </ul>
         </div>
         </div>
-
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
@@ -70,6 +76,10 @@
             for (var i = 0; i < gatheredPosts.length; i++) {
                     var linkText = document.createTextNode("+ add me to cart");
                     var link = document.createElement("a");
+                    var divcont = document.createElement("div");
+                    var divcont2 = document.createElement("div");
+                    divcont.className = "element-container";
+                    divcont2.className = "element-container2"
                     link.value = i;
                     link.id = "item"+i;
                     link.href = "#";
@@ -79,8 +89,12 @@
                     var y = document.createElement("div");
                     y.className="gb-grocery-items"
                     var z = document.createElement("li")
-                    var t = document.createTextNode(i+" -- "+gatheredPosts[i].title+": "+gatheredPosts[i].price);
-                    x.appendChild(t);
+                    var t = document.createTextNode(gatheredPosts[i].title);
+                    var tt = document.createTextNode("Price: "+gatheredPosts[i].price);
+                    divcont.appendChild(t);
+                    divcont2.appendChild(tt);
+                    x.appendChild(divcont);
+                    x.appendChild(divcont2);
                     x.appendChild(link);
                     y.appendChild(x);
                     z.appendChild(y);
@@ -113,7 +127,7 @@
 
                 var times
                 times = prompt("How Many?");
-                alert("times"+times);
+                //alert("times"+times);
                 shoppingCart.push({carttitle:gatheredPosts[evt.target.value].title, cartprice:gatheredPosts[evt.target.value].price, carttimes: times});
                
                 /*
