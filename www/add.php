@@ -50,9 +50,7 @@
             <label><br>PRICE:</br> </label><input id="price" size ="100" style="width: 300px;" field="text"/>
             <button id="submit-button">ADD ITEM</button>
         </form>
-        <div id="items-container">
-        <div> Please fill in all required fields before submitting the form</div>
-            
+        <div id="items-container">            
         </div>
 
         <script type="text/javascript" src="js/index.js"></script>
@@ -103,7 +101,7 @@
                 gatheredPosts = window.localStorage.getArray("cachedPosts");
 
                 gatheredPosts.push({title:document.getElementById("name").value, price:document.getElementById("price").value});
-                
+
                 window.localStorage.setArray("cachedPosts", gatheredPosts);
             }
 
