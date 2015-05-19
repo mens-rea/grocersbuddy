@@ -42,8 +42,8 @@
         <a class="gb-menu-items" href="index.php"><div>HOME</div></a>
 
         <form>
-            <label>NAME: </label><input id="name" size ="100" field="text"/>
-            <label>PRICE: </label><input id="price" size ="100" field="text"/>
+            <label>NAME: </label><input id="name" size ="100" width ="100%" field="text"/>
+            <label>PRICE: </label><input id="price" size ="100" width ="100%" field="text"/>
             <button id="submit-button">ADD ITEM</button>
         </form>
         <div id="items-container">
