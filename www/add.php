@@ -66,6 +66,7 @@
 
             Storage.prototype.setArray = function(key, obj) {
                         return this.setItem(key, JSON.stringify(obj))
+                        alert("added");
             }
                 Storage.prototype.getArray = function(key) {
                         return JSON.parse(this.getItem(key))
