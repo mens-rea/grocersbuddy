@@ -45,9 +45,9 @@
 
         <form>
             <div id= "name" data-role="fieldcontain">
-            <label> NAME: </label><input id="name" size ="100" style="width: 300px;" field="text"/>
+            <label> NAME: </label><input id="name" size ="100" field="text"/>
             <div id= "price" data-role="fieldcontain">
-            <label>PRICE: </label><input id="price" size ="100" style="width: 300px;" field="text"/>
+            <label> PRICE: </label><input id="price" size ="100" field="text"/>
             <button id="submit-button">ADD ITEM</button>
         </form>
         <div id="items-container">            
