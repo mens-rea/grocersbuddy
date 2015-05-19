@@ -30,6 +30,8 @@
 
         <script type="text/javascript" src="js/processing/processing.min.js"></script>  
 
+       
+
         <title>SAPUL</title>
     </head>
     <body>
@@ -42,11 +44,12 @@
         <a class="gb-menu-items" href="index.php"><div>HOME</div></a>
 
         <form>
-            <label><br>NAME:</br> </label><input id="name" size ="100" style="width: 300px;" field="text"/>
-            <label><br>PRICE:</br> </label><input id="price" size ="100" style="width: 300px;" field="text"/>
+            <label><br>NAME:</br> </label><input id="name" data-role="fieldcontain" size ="100" style="width: 300px;" field="text"/>
+            <label><br>PRICE:</br> </label><input id="price" data-role="fieldcontain" size ="100" style="width: 300px;" field="text"/>
             <button id="submit-button">ADD ITEM</button>
         </form>
         <div id="items-container">
+        <div> Please fill in all required fields before submitting the form</div>
             
         </div>
 
@@ -72,11 +75,7 @@
 
             if(window.localStorage.getArray("cachedPosts") != null){
                 gatheredPosts = window.localStorage.getArray("cachedPosts");
-               showAlert: function (message, title) {
-                     if (navigator.notification) {
-                     navigator.notification.alert(message, null, title, 'OK');
-    }
-
+            }
 
             window.localStorage.setArray("cachedPosts", gatheredPosts);
             /*
@@ -102,7 +101,7 @@
                 gatheredPosts = window.localStorage.getArray("cachedPosts");
 
                 gatheredPosts.push({title:document.getElementById("name").value, price:document.getElementById("price").value});
-                //alert("hello");
+                alert("Your item has been added to list");
                 window.localStorage.setArray("cachedPosts", gatheredPosts);
             }
 
